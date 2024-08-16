@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="container">
       <header className="header">
-        <img src={profileImage} alt="Profile"  />
+        <img src={profileImage} alt="Profile" className='myimage' />
         <h1>Welcome to my Portfolio ✌️✌️</h1>
         <p> Creating bugs since 2004</p>
 <p>I'm currently learning DSA, Web Dev, AI/ML and other fancy words if exists</p>
@@ -102,15 +102,6 @@ function App() {
 
       </section>
 
-      <section>
-        <h2>Contact Me</h2>
-        <div className="contact-info">
-          <p>Email: example@example.com</p>
-          <p>
-            LinkedIn: <a href="https://www.linkedin.com/in/your-profile/">Profile</a>
-          </p>
-        </div>
-      </section>
     </div>
   );
 }

@@ -4,7 +4,7 @@ function Header() {
   return (
     <header className="bg-gray-800 text-white shadow-md">
       <nav className="container mx-auto p-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold">My Portfolio</h1>
+        <h1 className="text-2xl font-bold">Vaibhav Kumar</h1>
         <ul className="flex space-x-6">
           <li><a href="#home" className="hover:text-gray-400">Home</a></li>
           <li><a href="#about" className="hover:text-gray-400">About</a></li>
