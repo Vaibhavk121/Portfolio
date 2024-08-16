@@ -14,8 +14,8 @@ function Projects() {
           <p className="text-gray-600">A python project made with the help of OpenCV and </p>
         </div>
         <div className="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition duration-300">
-          <h3 className="text-xl font-semibold mb-2 text-gray-800">Face detection tool</h3>
-          <p className="text-gray-600">A python project made with the help of OpenCV and </p>
+          <h3 className="text-xl font-semibold mb-2 text-gray-800">DBMS Project</h3>
+          <p className="text-gray-600">A Insurance Managemnet System with the felp of Flask and MySQL</p>
         </div>
       </div>
     </section>
