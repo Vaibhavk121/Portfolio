@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { FiArrowDown, FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi';
 import { useState, useEffect } from 'react';
+import { TypeAnimation } from 'react-type-animation';
 
 // Simple Image Carousel with fade effect
 const SimpleImageCarousel = ({ images, interval = 3000 }) => {
@@ -48,7 +49,22 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
-              Hi, I'm <span className="text-primary-light dark:text-primary-dark">Vaibhav Kumar</span>
+              <TypeAnimation
+                sequence={[
+                  'Hi, I\'m',
+                  1000,
+                  'Hi, I\'m Vaibhav Kumar',
+                  1000,
+                  'I\'m a Developer',
+                  1000,
+                  'I\'m a Tech Explorer',
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+                className="text-primary-light dark:text-primary-dark"
+              />
             </h1>
             <h2 className="text-xl sm:text-2xl mb-6 text-gray-600 dark:text-gray-300">
               Engineering Student & Tech Explorer

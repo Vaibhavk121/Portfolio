@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import LoadingScreen from './components/LoadingScreen';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -13,6 +14,8 @@ import AnimatedBackground from './components/AnimatedBackground';
 import emailjs from '@emailjs/browser';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  
   useEffect(() => {
     // Initialize EmailJS
     emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
@@ -41,22 +44,29 @@ function App() {
 
   return (
     <>
-      <AnimatedBackground />
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Blog />
-        <Contact />
-        <Footer />
-      </motion.div>
-      <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+      <AnimatePresence mode="wait">
+        {isLoading ? (
+          <LoadingScreen key="loading" onLoadingComplete={() => setIsLoading(false)} />
+        ) : (
+          <motion.div
+            key="content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <AnimatedBackground />
+            <Navbar theme={theme} toggleTheme={toggleTheme} />
+            <Hero />
+            <About />
+            <Skills />
+            <Projects />
+            <Blog />
+            <Contact />
+            <Footer />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
