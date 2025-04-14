@@ -141,7 +141,7 @@ const About = () => {
               {quirkyHabits.map((habit, index) => (
                 <motion.div 
                   key={index}
-                  className="p-6 hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors duration-200"
+                  className="p-6 hover:bg-gray-50/50 dark:hover:bg-gray-700/50 transition-colors duration-200"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}

@@ -117,7 +117,7 @@ const Hero = () => {
               <div className="absolute -inset-0.3  from-primary-light to-purple-600 rounded-lg blur opacity-75 animate-pulse"></div>
               <div className="relative rounded-lg overflow-hidden aspect-square">
                 <SimpleImageCarousel 
-                  images={['profile.png', 'Hi.png', 'thinking.png', 'coding.png']} 
+                  images={[ 'Hi.png', 'thinking.png','profile.png', 'coding.png']} 
                   interval={3000} 
                 />
               </div>
