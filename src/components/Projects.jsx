@@ -57,7 +57,7 @@ const Projects = () => {
     : projects.filter(project => project.category.includes(activeFilter));
   
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="projects" className="py-10 bg-gray-50 dark:bg-gray-900">
       <div className="section-container">
         <motion.h2
           className="section-title"
@@ -66,11 +66,11 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Featured Projects
+          My Createive Lab
         </motion.h2>
         
         <motion.div
-          className="flex flex-wrap justify-center gap-3 mb-12"
+          className="flex flex-wrap justify-center gap-0 mb-3"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

@@ -108,17 +108,9 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="skills" className="py-0 bg-gray-50 dark:bg-gray-900">
       <div className="section-container">
-        <motion.h2
-          className="section-title"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          Featured Skills
-        </motion.h2>
+        
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Left side - Skills */}
