@@ -39,11 +39,6 @@ const About = () => {
       icon: <FiZap />,
       title: 'Night Owl',
       description: 'My best code happens after midnight. The bugs fear the dark (or maybe that iss just when they cannot see me coming).'
-    },
-    {
-      icon: <FiSmile />,
-      title: 'Rubber Duck Collector',
-      description: 'I own several rubber ducks for debugging. Each has a specialty in different programming languages.'
     }
   ];
 
@@ -104,7 +99,7 @@ const About = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {funFacts.map((fact, index) => (
               <motion.div
