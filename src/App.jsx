@@ -10,8 +10,13 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
 import AnimatedBackground from './components/AnimatedBackground';
+import emailjs from '@emailjs/browser';
 
 function App() {
+  useEffect(() => {
+    // Initialize EmailJS
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
   // Add theme state and toggle function
   const [theme, setTheme] = useState('light');
   

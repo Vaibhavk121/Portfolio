@@ -57,7 +57,7 @@ const Projects = () => {
     : projects.filter(project => project.category.includes(activeFilter));
   
   return (
-    <section id="projects" className="py-10 bg-gray-50 dark:bg-gray-900">
+    <section id="projects" className="py-10">
       <div className="section-container">
         <motion.h2
           className="section-title"
@@ -89,7 +89,7 @@ const Projects = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.5 }}
-                className="card overflow-hidden"
+                className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm card overflow-hidden"
               >
                 <div className="relative overflow-hidden group">
                   <img 
