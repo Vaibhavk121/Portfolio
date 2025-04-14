@@ -75,7 +75,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>1ep22cs116@eastpoint.ac.in</li>
+              <li>vaibhavkumar10112004@gmail.com</li>
               <li>India</li>
               <li>+91 97318 14995</li>
             </ul>
