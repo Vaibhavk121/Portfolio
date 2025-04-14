@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiTwitter, FiHeart } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiTwitter, FiHeart, FiInstagram } from 'react-icons/fi';
 import { Link } from 'react-scroll';
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
   const socialLinks = [
     { icon: <FiGithub />, url: 'https://github.com/Vaibhavk121' },
     { icon: <FiLinkedin />, url: 'https://www.linkedin.com/in/vaibhav-kumar-b366872a6/' },
-    { icon: <FiTwitter />, url: 'https://twitter.com' }
+    { icon: <FiInstagram />, url: 'https://www.instagram.com/vaibhav.k111?utm_source=qr&igsh=dXNjbGJoazJjanY=' }
   ];
   
   const navLinks = [
