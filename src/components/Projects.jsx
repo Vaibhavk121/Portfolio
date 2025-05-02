@@ -66,7 +66,7 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          My Createive Lab
+          My Creative Lab
         </motion.h2>
         
         <motion.div

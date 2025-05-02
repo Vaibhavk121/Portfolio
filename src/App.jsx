@@ -11,6 +11,10 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
 import AnimatedBackground from './components/AnimatedBackground';
+import VoiceNavigation from './components/VoiceNavigation';
+import Terminal from './components/Terminal';
+import Journey from './components/Journey';
+import MusicPlayer from './components/MusicPlayer';
 import emailjs from '@emailjs/browser';
 
 function App() {
@@ -20,6 +24,7 @@ function App() {
     // Initialize EmailJS
     emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
   }, []);
+  
   // Add theme state and toggle function
   const [theme, setTheme] = useState('light');
   
@@ -64,6 +69,9 @@ function App() {
             <Contact />
             <Footer />
             <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+            <VoiceNavigation toggleTheme={toggleTheme} />
+            <Terminal />
+            <MusicPlayer />
           </motion.div>
         )}
       </AnimatePresence>
