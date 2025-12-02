@@ -23,6 +23,7 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', to: 'home' },
     { name: 'BtC', to: 'about' },
+    { name: 'Experience', to: 'experience' },
     { name: 'Tech Stack', to: 'skills' },
     { name: 'Projects', to: 'projects' },
     { name: 'Journey', to: 'blog' },
@@ -41,13 +42,13 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex-shrink-0">
+        <div className="flex items-center justify-between h-20 w-full">
+          <div className="flex-shrink-0 min-w-0">
             <Link
               to="home"
               smooth={true}
               duration={500}
-              className="cursor-pointer"
+              className="cursor-pointer block"
             >
               <img 
                 src="./mylogo.png" 
@@ -78,12 +79,16 @@ const Navbar = () => {
           </div>
           
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex-shrink-0">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-primary-light/10 hover:text-primary-light dark:hover:bg-primary-dark/10 dark:hover:text-primary-dark transition-colors duration-300 focus:outline-none"
+              className={`inline-flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300 focus:outline-none z-50 relative shadow-lg mr-6 ${
+                scrolled
+                  ? 'bg-gray-100 dark:bg-gray-800 hover:bg-primary-light/10 hover:text-primary-light dark:hover:bg-primary-dark/10 dark:hover:text-primary-dark'
+                  : 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm hover:bg-white dark:hover:bg-gray-800 text-gray-800 dark:text-gray-200'
+              }`}
             >
-              {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {isOpen ? <FiX size={16} /> : <FiMenu size={16} />}
             </button>
           </div>
         </div>
@@ -92,7 +97,7 @@ const Navbar = () => {
       {/* Mobile menu */}
       {isOpen && (
         <motion.div
-          className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg border-t border-gray-200 dark:border-gray-800"
+          className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg border-t border-gray-200 dark:border-gray-800 absolute top-full left-0 right-0 z-40"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}

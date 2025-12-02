@@ -7,15 +7,15 @@ import { TypeAnimation } from 'react-type-animation';
 // Simple Image Carousel with fade effect
 const SimpleImageCarousel = ({ images, interval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, interval);
-    
+
     return () => clearInterval(timer);
   }, [images.length, interval]);
-  
+
   return (
     <div className="w-full h-full relative">
       <AnimatePresence mode="wait">
@@ -27,9 +27,9 @@ const SimpleImageCarousel = ({ images, interval = 3000 }) => {
           transition={{ duration: 1 }}
           className="absolute inset-0"
         >
-          <img 
-            src={`./me/${images[currentIndex]}`} 
-            alt={`Vaibhav Kumar ${currentIndex}`} 
+          <img
+            src={`./me/${images[currentIndex]}`}
+            alt={`Vaibhav Kumar ${currentIndex}`}
             className="w-full h-full object-cover rounded-lg"
           />
         </motion.div>
@@ -40,13 +40,14 @@ const SimpleImageCarousel = ({ images, interval = 3000 }) => {
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center">
-      <div className="section-container">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <section id="home" className="min-h-screen flex items-center pt-20 md:pt-0">
+      <div className="section-container py-8 md:py-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
+            className="order-2 md:order-1"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
               <TypeAnimation
@@ -70,7 +71,7 @@ const Hero = () => {
               Engineering Student & Tech Explorer
             </h2>
             <p className="text-lg mb-8 max-w-lg">
-              I'm a 3rd year engineering student exploring multiple domains including MERN stack, AI/ML, 
+              I'm a 3rd year engineering student exploring multiple domains including MERN stack, AI/ML,
               cross-platform mobile development, and full-stack web development.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -127,14 +128,14 @@ const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="hidden md:block"
+            className="flex justify-center order-1 md:order-2"
           >
-            <div className="relative">
-              <div className="absolute -inset-0.3  from-primary-light to-purple-600 rounded-lg blur opacity-75 animate-pulse"></div>
+            <div className="relative w-full max-w-sm md:max-w-md">
+              <div className="absolute -inset-0.3 bg-gradient-to-r from-primary-light to-purple-600 rounded-lg blur opacity-75 animate-pulse"></div>
               <div className="relative rounded-lg overflow-hidden aspect-square">
-                <SimpleImageCarousel 
-                  images={[ 'Hi.png', 'thinking.png','profile.png', 'coding.png']} 
-                  interval={3000} 
+                <SimpleImageCarousel
+                  images={['Hi.png', 'thinking.png', 'profile.png', 'coding.png']}
+                  interval={3000}
                 />
               </div>
             </div>
@@ -145,9 +146,7 @@ const Hero = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
         >
-          <Link to="about" smooth={true} duration={500} offset={-70} className="cursor-pointer">
-            <FiArrowDown size={24} className="text-primary-light dark:text-primary-dark" />
-          </Link>
+          
         </motion.div>
       </div>
     </section>
