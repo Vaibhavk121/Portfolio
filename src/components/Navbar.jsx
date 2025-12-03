@@ -54,6 +54,8 @@ const Navbar = () => {
                 src="./mylogo.png" 
                 alt="Vaibhav Kumar" 
                 className="h-10 w-auto hover:scale-105 transition-transform duration-300"
+                loading="eager"
+                decoding="async"
               />
             </Link>
           </div>

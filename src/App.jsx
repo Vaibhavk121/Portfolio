@@ -14,6 +14,7 @@ import ThemeToggle from './components/ThemeToggle';
 import AnimatedBackground from './components/AnimatedBackground';
 import Terminal from './components/Terminal';
 import emailjs from '@emailjs/browser';
+import { preloadImages, getCriticalImages } from './utils/imageOptimization';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,6 +22,9 @@ function App() {
   useEffect(() => {
     // Initialize EmailJS
     emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+    
+    // Preload critical images for faster deployment
+    preloadImages(getCriticalImages()).catch(err => console.warn('Image preload warning:', err));
   }, []);
 
   // Add theme state and toggle function

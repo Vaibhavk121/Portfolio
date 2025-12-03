@@ -1,12 +1,24 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { FiArrowDown, FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 
-// Simple Image Carousel with fade effect
+// Simple Image Carousel with fade effect and optimized loading
 const SimpleImageCarousel = ({ images, interval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loadedImages, setLoadedImages] = useState(new Set([0]));
+
+  // Preload images on component mount
+  useEffect(() => {
+    images.forEach((img, index) => {
+      const image = new Image();
+      image.src = `./me/${img}`;
+      image.onload = () => {
+        setLoadedImages((prev) => new Set([...prev, index]));
+      };
+    });
+  }, [images]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -16,8 +28,10 @@ const SimpleImageCarousel = ({ images, interval = 3000 }) => {
     return () => clearInterval(timer);
   }, [images.length, interval]);
 
+  const nextIndex = (currentIndex + 1) % images.length;
+
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative ">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
@@ -31,9 +45,18 @@ const SimpleImageCarousel = ({ images, interval = 3000 }) => {
             src={`./me/${images[currentIndex]}`}
             alt={`Vaibhav Kumar ${currentIndex}`}
             className="w-full h-full object-cover rounded-lg"
+            loading="eager"
+            decoding="async"
           />
         </motion.div>
       </AnimatePresence>
+      
+      {/* Preload next image */}
+      <link 
+        rel="preload" 
+        as="image" 
+        href={`./me/${images[nextIndex]}`}
+      />
     </div>
   );
 };
