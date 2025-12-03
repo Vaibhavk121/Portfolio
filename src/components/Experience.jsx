@@ -130,7 +130,7 @@ const Experience = () => {
                       <img 
                         src={experience.logo} 
                         alt={experience.company}
-                        className="w-12 h-12 rounded-lg object-contain bg-gray-100 dark:bg-gray-700 p-2"
+                        className="w-14 h-14 rounded-lg object-contain  "
                       />
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
