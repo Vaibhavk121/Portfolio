@@ -48,8 +48,21 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
+          animations: ['framer-motion'],
+          three: ['three', '@react-three/fiber', '@react-three/drei'],
         },
       },
     },
+    // Generate source maps for better debugging
+    sourcemap: false,
+    // Optimize for production - using default esbuild minifier
+    minify: 'esbuild',
+  },
+  // SEO-friendly routing
+  server: {
+    historyApiFallback: true,
+  },
+  preview: {
+    historyApiFallback: true,
   },
 })

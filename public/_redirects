@@ -1,0 +1,11 @@
+# Netlify redirects for SPA
+/*    /index.html   200
+
+# Redirect common variations to canonical URL
+/home /  301
+/portfolio /  301
+
+# Redirect old URLs if any
+/about.html /#about 301
+/projects.html /#projects 301
+/contact.html /#contact 301

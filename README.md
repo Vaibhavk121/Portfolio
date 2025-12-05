@@ -92,6 +92,32 @@ npm run dev
 - 📸 **Instagram**: Follow my journey on [Instagram](https://www.instagram.com/vaibhav.k111)
 
 
+## 🔍 SEO Optimization
+
+This portfolio is fully optimized for search engines to ensure maximum visibility:
+
+### SEO Features Implemented:
+- **Comprehensive Meta Tags**: Title, description, keywords, Open Graph, Twitter Cards
+- **Structured Data**: JSON-LD schema for person/professional information
+- **Sitemap & Robots.txt**: Proper crawling instructions for search engines
+- **Semantic HTML**: Proper heading hierarchy and semantic elements
+- **Performance Optimization**: Image optimization, code splitting, compression
+- **Mobile-First Design**: Responsive and mobile-optimized
+- **Fast Loading**: Optimized images, lazy loading, and efficient bundling
+
+### Domain Configuration:
+- **Primary Domain**: [vaibhavk.site](https://vaibhavk.site)
+- **Canonical URLs**: Proper canonical tags to avoid duplicate content
+- **Social Media Integration**: Optimized for sharing on all platforms
+
+### Search Engine Targeting:
+Optimized to rank for keywords like:
+- "Vaibhav Kumar"
+- "Vaibhav Kumar Full Stack Developer"
+- "Vaibhav Kumar Software Engineer"
+- "Vaibhav Kumar Portfolio"
+- "React Developer Vaibhav Kumar"
+
 ## 📄 License
 This project is open source and available under the MIT License .
 

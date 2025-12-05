@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
 import AnimatedBackground from './components/AnimatedBackground';
 import Terminal from './components/Terminal';
+import SEOHead from './components/SEOHead';
 import emailjs from '@emailjs/browser';
 import { preloadImages, getCriticalImages } from './utils/imageOptimization';
 
@@ -51,6 +52,7 @@ function App() {
 
   return (
     <>
+      <SEOHead />
       <AnimatePresence mode="wait">
         {isLoading ? (
           <LoadingScreen key="loading" onLoadingComplete={() => setIsLoading(false)} />
