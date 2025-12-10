@@ -94,7 +94,7 @@ const Hero = () => {
               Engineering Student & Tech Explorer
             </h2>
             <p className="text-lg mb-8 max-w-lg">
-              I'm a 3rd year engineering student exploring multiple domains including MERN stack, AI/ML,
+              I'm a Final Year student engineering student exploring multiple domains including MERN stack, AI/ML,
               cross-platform mobile development, and full-stack web development.
             </p>
             <div className="flex flex-wrap gap-4">
