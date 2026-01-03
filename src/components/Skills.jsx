@@ -44,22 +44,17 @@ const TechGlobe = () => {
   }, []);
 
   const technologies = [
-    { name: 'React', logo: '/logos/react.png' },
-    { name: 'JavaScript', logo: '/logos/javascipt.png' },
-    { name: 'HTML5', logo: '/logos/html.png' },
-    { name: 'CSS3', logo: '/logos/css3.png' },
-    { name: 'Tailwind', logo: '/logos/Tailwind.png' },
-    { name: 'Node.js', logo: '/logos/node.png' },
-    { name: 'Express', logo: '/logos/Express.png' },
-    { name: 'MongoDB', logo: '/logos/MongoDB.png' },
-    { name: 'TypeScript', logo: '/logos/TypeScript.png' },
-    { name: 'Python', logo: '/logos/python.png' },
-    { name: 'TensorFlow', logo: '/logos/TensorFlow.png' },
-    { name: 'React Native', logo: '/logos/react.png' },
-    { name: 'Git', logo: '/logos/git.png' },
-    { name: 'GitHub', logo: '/logos/GitHub.png' },
-    { name: 'Firebase', logo: '/logos/Firebase.png' },
-    { name: 'Postgrees', logo: '/logos/postgresql.svg' }
+    { name: 'Notion', logo: '/logos/notion.png' },
+    { name: 'Jira', logo: '/logos/jira.png' },
+    { name: 'Figma', logo: '/logos/figma.png' },
+    { name: 'Miro', logo: '/logos/miro.png' },
+    { name: 'Slack', logo: '/logos/slack.png' },
+    { name: 'Airtable', logo: '/logos/airtable.png' },
+    { name: 'Confluence', logo: '/logos/confluence.png' },
+    { name: 'Zapier', logo: '/logos/zapier.png' },
+    { name: 'Intercom', logo: '/logos/intercom.png' },
+    { name: 'Tableau', logo: '/logos/tableau.png' },
+    { name: 'Excel', logo: '/logos/excel.png' }
   ];
   
   // Create positions on a sphere

@@ -7,49 +7,47 @@ const Projects = () => {
   
   const filters = [
     { id: 'all', label: 'All Projects' },
-    { id: 'web', label: 'Web Dev', icon: <FiGlobe /> },
-    { id: 'mobile', label: 'Mobile Apps', icon: <FiSmartphone /> },
-    { id: 'ai', label: 'AI/ML', icon: <FiCpu /> },
-    { id: 'fullstack', label: 'Full Stack', icon: <FiCode /> }
+    { id: 'strategy', label: 'Product Learning', icon: <FiGlobe /> },
+    { id: 'growth', label: 'Growth Exploration', icon: <FiSmartphone /> },
+    { id: 'operations', label: 'Operations Learning', icon: <FiCpu /> },
+    { id: 'community', label: 'Community Building', icon: <FiCode /> }
   ];
   
   const projects = [
     {
         id: 1,
-        title: 'DDOS.AI- AI based DDoS Attack Detection System',
-        description: 'An AI-powered DDoS attack detection system that uses machine learning algorithms to identify and block DDoS attacks in real-time.',
+        title: 'DDOS.AI - Learning Product Strategy',
+        description: 'Applied product thinking to AI security project. Conducted basic market research and user validation to understand product-market fit - my first experience with strategic product approach.',
         image: './projects/ddos.webp',
-        category: ['ai'],
-        technologies: ['Python', 'TensorFlow', 'Flask', 'GNN'],
+        category: ['strategy'],
+        technologies: ['Market Research', 'User Interviews', 'Competitive Analysis', 'Product Learning'],
         links: {
           github: 'https://github.com/Vaibhavk121/ddos.ai-public.git'
         }
       },
     {
       id: 2,
-      title: 'Fearlessher-Comunity based women Safety App',
-      description: 'A community based women safety application for women.Which leverages the power of technology to provide women with a safe and secure environment.',
+      title: 'Fearlessher - Community Building Learning',
+      description: 'Explored community growth strategies for women safety app. Learned about user acquisition, engagement metrics, and community building - gaining insights into growth thinking.',
       image: './projects/fearlessher.png',
-      category: ['mobile', 'fullstack'],
-      technologies: ['React Native','Expo', 'Node.js', 'Express', 'MongoDB', 'Firebase'],
+      category: ['growth', 'community'],
+      technologies: ['Community Learning', 'User Research', 'Engagement Analysis', 'Growth Exploration'],
       links: {
-        
         github: 'https://github.com/Vaibhavk121/FearlessHer-Frontend.git'
       }
     },
     {
       id: 3,
-      title: 'Samskruhti-2k25',
-      description: 'The website for Samskruhti 2k25. Our College annual cultural fest on the theme of - World Under the Sea',
+      title: 'Samskruhti-2k25 - Operations Learning',
+      description: 'Managed website operations for college cultural fest. Learned coordination, user flow optimization, and basic metrics analysis - my introduction to operational thinking.',
       image: './projects/samskruhti2k25.png',
-      category: ['web'],
-      technologies: ['React', 'Tailwind', 'Framer Motion'],
+      category: ['operations'],
+      technologies: ['Project Coordination', 'Team Collaboration', 'Process Learning', 'Basic Analytics'],
       links: {
         demo: 'https://www.samskruthi.co.in/',
         github: 'https://github.com/Vaibhavk121/Samskruthi_2k25.git'
       }
     },
-    
   ];
   
   const filteredProjects = activeFilter === 'all' 
@@ -66,7 +64,7 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          My Creative Lab
+          My Learning Portfolio
         </motion.h2>
         
         <motion.div

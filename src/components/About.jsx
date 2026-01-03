@@ -27,34 +27,34 @@ const About = () => {
   const funFacts = [
     {
       icon: <FiCoffee />,
-      title: 'Caffeine Powered',
-      description: 'I can turn coffee into code with surprising efficiency. My record is 5 cups in one coding session!'
+      title: 'Strategy Fuel',
+      description: 'I can turn coffee into strategic insights with surprising efficiency. My record is 3 product roadmaps in one caffeine session!'
     },
     {
       icon: <FiMusic />,
-      title: 'Coding Playlist Master',
-      description: 'I have a perfectly curated playlist for every type of coding problem. Debug mode has its own soundtrack!'
+      title: 'Focus Mode Master',
+      description: 'I have a perfectly curated playlist for every type of strategic work. User research has its own soundtrack!'
     },
     {
       icon: <FiZap />,
-      title: 'Night Owl',
-      description: 'My best code happens after midnight. The bugs fear the dark (or maybe that iss just when they cannot see me coming).'
+      title: 'Data Detective',
+      description: 'My best insights happen when diving deep into user behavior data. The patterns reveal themselves to those who look closely.'
     }
   ];
 
   const quirkyHabits = [
-    { title: 'Tab vs Spaces', description: 'Will passionately defend my choice in the eternal debate (it is a  tabs, by the way)' },
-    { title: 'Naming Variables', description: 'Spend more time naming variables than actually writing code' },
-    { title: 'Error Messages', description: 'Can identify the problem from just the first line of a stack trace' },
-    { title: 'Documentation', description: 'Actually reads documentation before trying random solutions from Stack Overflow' }
+    { title: 'User vs Business', description: 'Will passionately advocate for user needs while balancing business objectives (users always win in my heart)' },
+    { title: 'Process Documentation', description: 'Spend more time documenting processes than most people spend using them' },
+    { title: 'Data Patterns', description: 'Can spot user behavior anomalies from just a quick glance at analytics dashboards' },
+    { title: 'Stakeholder Translation', description: 'Actually enjoy translating between technical teams and business stakeholders' }
   ];
 
   const randomSkills = [
-    { skill: 'Explaining technical concepts to non-technical people', level: 85 },
-    { skill: 'Finding the perfect meme for any coding situation', level: 92 },
-    { skill: 'Staying calm when the production server crashes', level: 70 },
-    { skill: 'Pretending I know what I am doing', level: 99 },
-    { skill: 'Actually knowing what I am doing', level: 75 }
+    { skill: 'Explaining complex strategies to diverse stakeholders', level: 88 },
+    { skill: 'Finding the perfect framework for any operational challenge', level: 85 },
+    { skill: 'Staying calm when user metrics suddenly drop', level: 75 },
+    { skill: 'Pretending I have all the answers in meetings', level: 92 },
+    { skill: 'Actually having data-backed answers', level: 80 }
   ];
 
   return (
@@ -67,9 +67,9 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="section-title">Beyond The Code</h2>
+          <h2 className="section-title">Beyond The Strategy</h2>
           <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
-            The human behind the keyboard (yes, I'm not an AI... probably)
+            The strategic mind behind the operations (and yes, I still love a good coffee)
           </p>
         </motion.div>
         
@@ -132,9 +132,9 @@ const About = () => {
               <div className="w-16 h-16 bg-primary-light/10 dark:bg-primary-dark/10 rounded-full flex items-center justify-center text-primary-light dark:text-primary-dark text-3xl mx-auto mb-4">
                 <FiStar />
               </div>
-              <h3 className="text-2xl font-bold mb-2">Developer Quirks</h3>
+              <h3 className="text-2xl font-bold mb-2">Product Quirks</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6">
-                We all have our little quirks. Here are some of mine that make me... uniquely me.
+                We all have our little quirks. Here are some of mine that make me... uniquely strategic.
               </p>
             </div>
             <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -167,9 +167,9 @@ const About = () => {
               <div className="w-16 h-16 bg-primary-light/10 dark:bg-primary-dark/10 rounded-full flex items-center justify-center text-primary-light dark:text-primary-dark text-3xl mx-auto mb-4">
                 <FiBookOpen />
               </div>
-              <h3 className="text-2xl font-bold mb-2">Unconventional Skills</h3>
+              <h3 className="text-2xl font-bold mb-2">Strategic Skills</h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Skills you won't find on my LinkedIn profile, but are equally important!
+                Skills you won't find on traditional PM job descriptions, but are equally important!
               </p>
             </div>
             <div className="space-y-6">
@@ -209,9 +209,9 @@ const About = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <blockquote className="text-xl italic text-gray-700 dark:text-gray-300">
-            "I don't always test my code, but when I do, I do it in production."
+            "The best products are born when user needs, business goals, and operational excellence converge."
           </blockquote>
-          <p className="mt-2 text-gray-500 dark:text-gray-500">— Every developer at some point</p>
+          <p className="mt-2 text-gray-500 dark:text-gray-500">— Product Management Philosophy</p>
         </motion.div>
       </div>
     </section>

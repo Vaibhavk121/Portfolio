@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 
 const SEOHead = ({ 
-  title = "Vaibhav Kumar - Full Stack Developer & Software Engineer Portfolio",
-  description = "Vaibhav Kumar is a passionate Full Stack Developer and Software Engineer specializing in React, Node.js, AI/ML, and modern web technologies.",
-  keywords = "Vaibhav Kumar, Full Stack Developer, Software Engineer, React Developer, Node.js, AI ML, Web Developer, Portfolio",
+  title = "Vaibhav Kumar - Aspiring Product Manager & Operations Professional",
+  description = "Vaibhav Kumar is transitioning from development to product management and operations at Scaler AI Labs, learning user-centric solutions, operational efficiency, and strategic thinking.",
+  keywords = "Vaibhav Kumar, Aspiring Product Manager, Learning Operations, Scaler AI Labs, Product Strategy, Career Transition, User Experience, Data Analytics",
   image = "/mylogo.png",
   url = "https://vaibhavk.site/"
 }) => {

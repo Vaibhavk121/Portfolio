@@ -7,77 +7,90 @@ const Experience = () => {
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { duration: 0.6 } 
+      transition: { duration: 0.6 }
     }
   };
 
-  const experience = {
-    title: "Full Stack Developer",
-    company: "Trikona Tech",
-    type: "Internship",
-    duration: "Aug 2025 - Nov 2025 · 4 mos",
-    location: "Bengaluru, Karnataka, India · Hybrid",
-    description: "Wore multiple hats in a high-speed startup environment - building Full Stack features, fixing whatever broke, and turning rough product ideas into working software that users actually touched.",
-    logo: "/trikona.ico"
-  };
+  const experiences = [
+    {
+      title: "Operations Intern",
+      company: "Scaler AI Labs",
+      type: "Internship",
+      duration: "Dec 2024 - Present · 1+ mos",
+      location: "Bengaluru, Karnataka, India · Hybrid",
+      description: "Learning operational excellence and cross-functional collaboration in AI education. Gaining hands-on experience in process optimization, stakeholder management, and data-driven decision making while contributing to user experience improvements.",
+      logo: "/logos/scaler.png",
+      current: true
+    },
+    {
+      title: "Full Stack Developer",
+      company: "Trikona Tech",
+      type: "Internship",
+      duration: "Aug 2024 - Nov 2024 · 4 mos",
+      location: "Bengaluru, Karnataka, India · Hybrid",
+      description: "Started as a technical developer and began learning product thinking. Built full-stack features while discovering the importance of user-centric design, product strategy, and cross-functional collaboration in delivering meaningful solutions.",
+      logo: "/trikona.ico",
+      current: false
+    }
+  ];
 
   const highlights = [
     {
-      icon: <FiCode />,
-      title: "Full Stack Magic",
-      description: "Built end-to-end features from database to UI, because why specialize when you can do it all?"
-    },
-    {
-      icon: <FiTool />,
-      title: "Bug Whisperer",
-      description: "Became the go-to person for 'fixing whatever broke' - turns out, that's a surprisingly valuable skill!"
-    },
-    {
-      icon: <FiZap />,
-      title: "Idea Translator",
-      description: "Transformed rough product sketches into actual working software that real humans could use and love"
+      icon: <FiBriefcase />,
+      title: "Learning Operations",
+      description: "Gaining experience in process optimization and workflow improvement at Scaler AI Labs"
     },
     {
       icon: <FiUsers />,
-      title: "Startup Survivor",
-      description: "Thrived in the beautiful chaos of startup life where every day brought new challenges and coffee"
+      title: "Cross-functional Learning",
+      description: "Learning to work with product, engineering, and business teams to understand different perspectives"
+    },
+    {
+      icon: <FiZap />,
+      title: "Product Thinking",
+      description: "Developing product mindset by applying user-centric thinking to operational challenges"
+    },
+    {
+      icon: <FiTool />,
+      title: "Process Improvement",
+      description: "Learning to identify bottlenecks and contribute to solutions that improve team productivity"
     }
   ];
 
   const skills = [
-    "React & Node.js",
-    "Database Design",
-    "API Development", 
-    "UI/UX Implementation",
-    "Bug Hunting",
-    "Product Development",
-    "Startup Hustle",
-    "Coffee Consumption"
+    "Learning Operations Management",
+    "Developing Product Thinking",
+    "Cross-functional Collaboration",
+    "Process Analysis",
+    "Data Interpretation",
+    "Stakeholder Communication",
+    "User Experience Awareness",
+    "Strategic Learning"
   ];
 
   const funStats = [
-    { label: "Lines of Code Written", value: "10,000+", icon: <FiCode /> },
-    { label: "Bugs Fixed", value: "∞", icon: <FiTool /> },
-    { label: "Coffee Cups", value: "247", icon: <FiCoffee /> },
-    { label: "Features Shipped", value: "15+", icon: <FiZap /> }
+    { label: "Processes Analyzed", value: "5+", icon: <FiTool /> },
+    { label: "Learning Projects", value: "3+", icon: <FiUsers /> },
+    { label: "Team Meetings", value: "25+", icon: <FiBriefcase /> },
+    { label: "Learning Insights", value: "∞", icon: <FiZap /> }
   ];
 
   return (
     <section id="experience" className="py-20">
       <div className="section-container">
-        <motion.div 
+        <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="section-title">Work Experience</h2>
+          <h2 className="section-title">Learning Experience</h2>
           <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
-            Where I learned that "it works on my machine" isn't a valid deployment strategy
+            My journey from technical development to product thinking - learning through hands-on experience and mentorship
           </p>
         </motion.div>
 
@@ -88,11 +101,10 @@ const Experience = () => {
               <button
                 key={tab}
                 onClick={() => setActiveView(tab)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                  activeView === tab 
-                    ? 'bg-white dark:bg-gray-700 shadow-sm' 
-                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
-                }`}
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${activeView === tab
+                  ? 'bg-white dark:bg-gray-700 shadow-sm'
+                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+                  }`}
               >
                 {tab === 'timeline' ? 'Timeline' : tab === 'highlights' ? 'Highlights' : 'Fun Stats'}
               </button>
@@ -111,65 +123,77 @@ const Experience = () => {
             <div className="relative">
               {/* Timeline Line */}
               <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-light to-primary-dark"></div>
-              
-              {/* Experience Card */}
-              <motion.div
-                variants={fadeInUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="relative pl-20 pb-12"
-              >
-                {/* Timeline Dot */}
-                <div className="absolute left-6 top-6 w-4 h-4 bg-primary-light dark:bg-primary-dark rounded-full border-4 border-white dark:border-gray-900 shadow-lg"></div>
-                
-                {/* Experience Card */}
-                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border-l-4 border-primary-light dark:border-primary-dark hover:shadow-xl transition-all duration-300">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center space-x-4">
-                      <img 
-                        src={experience.logo} 
-                        alt={experience.company}
-                        className="w-14 h-14 rounded-lg object-contain  "
-                      />
-                      <div>
-                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                          {experience.title}
-                        </h3>
-                        <p className="text-lg text-primary-light dark:text-primary-dark font-semibold">
-                          {experience.company} · {experience.type}
-                        </p>
+
+              {/* Experience Cards */}
+              {experiences.map((experience, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeInUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="relative pl-20 pb-12"
+                >
+                  {/* Timeline Dot */}
+                  <div className={`absolute left-6 top-6 w-4 h-4 rounded-full border-4 border-white dark:border-gray-900 shadow-lg ${experience.current
+                    ? 'bg-green-500 animate-pulse'
+                    : 'bg-primary-light dark:bg-primary-dark'
+                    }`}></div>
+
+                  {/* Experience Card */}
+                  <div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border-l-4 hover:shadow-xl transition-all duration-300 ${experience.current
+                    ? 'border-green-500'
+                    : 'border-primary-light dark:border-primary-dark'
+                    }`}>
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex items-center space-x-4">
+                        <img
+                          src={experience.logo}
+                          alt={experience.company}
+                          className="w-14 h-14 rounded-lg object-contain"
+                        />
+                        <div>
+                          <div className="flex items-center space-x-2">
+                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                              {experience.title}
+                            </h3>
+                            
+                          </div>
+                          <p className="text-lg text-primary-light dark:text-primary-dark font-semibold">
+                            {experience.company} · {experience.type}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex flex-wrap gap-4 mb-4 text-sm text-gray-600 dark:text-gray-400">
-                    <div className="flex items-center space-x-1">
-                      <FiCalendar className="w-4 h-4" />
-                      <span>{experience.duration}</span>
+
+                    <div className="flex flex-wrap gap-4 mb-4 text-sm text-gray-600 dark:text-gray-400">
+                      <div className="flex items-center space-x-1">
+                        <FiCalendar className="w-4 h-4" />
+                        <span>{experience.duration}</span>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <FiMapPin className="w-4 h-4" />
+                        <span>{experience.location}</span>
+                      </div>
                     </div>
-                    <div className="flex items-center space-x-1">
-                      <FiMapPin className="w-4 h-4" />
-                      <span>{experience.location}</span>
+
+                    <p className="text-gray-700 dark:text-gray-300 mb-6 text-lg leading-relaxed">
+                      {experience.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {skills.map((skill, skillIndex) => (
+                        <span
+                          key={skillIndex}
+                          className="px-3 py-1 bg-primary-light/10 dark:bg-primary-dark/10 text-primary-light dark:text-primary-dark rounded-full text-sm font-medium"
+                        >
+                          {skill}
+                        </span>
+                      ))}
                     </div>
                   </div>
-                  
-                  <p className="text-gray-700 dark:text-gray-300 mb-6 text-lg leading-relaxed">
-                    {experience.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {skills.map((skill, index) => (
-                      <span 
-                        key={index}
-                        className="px-3 py-1 bg-primary-light/10 dark:bg-primary-dark/10 text-primary-light dark:text-primary-dark rounded-full text-sm font-medium"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         )}
@@ -245,9 +269,9 @@ const Experience = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <blockquote className="text-xl italic text-gray-700 dark:text-gray-300">
-            "In a startup, you don't just wear multiple hats - you become the entire hat store."
+            "The best learning happens when you combine curiosity with real-world application."
           </blockquote>
-          <p className="mt-2 text-gray-500 dark:text-gray-500">— Startup Life Wisdom</p>
+          <p className="mt-2 text-gray-500 dark:text-gray-500">— My Learning Philosophy</p>
         </motion.div>
       </div>
     </section>

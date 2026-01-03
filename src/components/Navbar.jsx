@@ -22,11 +22,12 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', to: 'home' },
-    { name: 'BtC', to: 'about' },
+    { name: 'About', to: 'about' },
     { name: 'Experience', to: 'experience' },
-    { name: 'Tech Stack', to: 'skills' },
+    { name: 'Skills', to: 'skills' },
     { name: 'Projects', to: 'projects' },
-    { name: 'Journey', to: 'blog' },
+    // { name: 'Impact', to: 'impact' },
+    { name: 'Insights', to: 'blog' },
     { name: 'Contact', to: 'contact' },
   ];
 

@@ -10,3 +10,11 @@ Crawl-delay: 1
 # Block access to admin or private areas (if any)
 Disallow: /admin/
 Disallow: /private/
+
+# Allow access to product management and growth content
+Allow: /#about
+Allow: /#skills
+Allow: /#projects
+Allow: /#experience
+Allow: /#impact
+Allow: /#contact

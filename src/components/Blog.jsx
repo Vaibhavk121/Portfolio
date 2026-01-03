@@ -39,7 +39,7 @@ const Blog = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="section-title">My Hackathon Journey</h2>
+          <h2 className="section-title">Professional Insights</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Connect with me on LinkedIn to see my latest posts and professional updates.
             

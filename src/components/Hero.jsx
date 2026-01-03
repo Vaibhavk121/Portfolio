@@ -79,9 +79,11 @@ const Hero = () => {
                   1000,
                   'Hi, I\'m Vaibhav Kumar',
                   1000,
-                  'I\'m a Developer',
+                  'Learning Product',
                   1000,
-                  'I\'m a Tech Explorer',
+                  'Exploring Operations',
+                  1000,
+                  'Growing Strategically',
                   1000,
                 ]}
                 wrapper="span"
@@ -91,20 +93,20 @@ const Hero = () => {
               />
             </h1>
             <h2 className="text-xl sm:text-2xl mb-6 text-gray-600 dark:text-gray-300">
-              Engineering Student & Tech Explorer
+              Aspiring Product Manager & Operations Professional
             </h2>
             <p className="text-lg mb-8 max-w-lg">
-              I'm a Final Year student engineering student exploring multiple domains including MERN stack, AI/ML,
-              cross-platform mobile development, and full-stack web development.
+              Currently learning operational excellence at Scaler AI Labs. I'm transitioning from development to product thinking, 
+              focusing on user-centric solutions and cross-functional collaboration while building my expertise.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="projects" smooth={true} duration={500} offset={-70}>
+              <Link to="experience" smooth={true} duration={500} offset={-70}>
                 <motion.button
                   className="btn-primary"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  View My Work
+                  View My Experience
                 </motion.button>
               </Link>
               <Link to="contact" smooth={true} duration={500} offset={-70}>
