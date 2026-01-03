@@ -157,7 +157,7 @@ const Experience = () => {
                             <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                               {experience.title}
                             </h3>
-                            
+
                           </div>
                           <p className="text-lg text-primary-light dark:text-primary-dark font-semibold">
                             {experience.company} · {experience.type}

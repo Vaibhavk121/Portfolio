@@ -6,13 +6,13 @@ const LoadingScreen = ({ onLoadingComplete }) => {
   const [currentLine, setCurrentLine] = useState(0);
   
   const codeLines = [
-    "import { Developer } from 'vaibhav-kumar';",
-    "const portfolio = new Portfolio();",
-    "portfolio.addSkills(['React', 'Node', 'AI/ML']);",
-    "portfolio.setPassion(true);",
-    "portfolio.initialize();",
-    "// Loading experience...",
-    "await portfolio.render();"
+    "🎯 Learning product strategy fundamentals...",
+    "📊 Exploring user research methodologies...",
+    "🤝 Building cross-functional collaboration skills...",
+    "⚙️ Understanding operational processes...",
+    "📈 Analyzing metrics and user feedback...",
+    "💡 Developing product thinking mindset...",
+    "🌱 Ready to share my learning journey!"
   ];
   
   useEffect(() => {
