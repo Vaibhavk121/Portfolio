@@ -16,14 +16,24 @@ const Experience = () => {
 
   const experiences = [
     {
+      title: "Operations Intern - Product Team",
+      company: "Signzy",
+      type: "Internship",
+      duration: "Feb 2026 - Present ",
+      location: "Bengaluru, Karnataka, India · Hybrid",
+      description: "Working as Operations Intern in the Product Team at Signzy, a leading fintech company. Contributing to product operations, user experience optimization, and cross-functional collaboration. Learning to apply product thinking to operational challenges while supporting product strategy and execution.",
+      logo: "/logos/signzy.jpg",
+      current: true
+    },
+    {
       title: "Operations Intern",
       company: "Scaler AI Labs",
       type: "Internship",
-      duration: "Dec 2024 - Present · 1+ mos",
+      duration: "Dec 2024 - Jan 2026 · 2 mos",
       location: "Bengaluru, Karnataka, India · Hybrid",
-      description: "Learning operational excellence and cross-functional collaboration in AI education. Gaining hands-on experience in process optimization, stakeholder management, and data-driven decision making while contributing to user experience improvements.",
+      description: "Learned operational excellence and cross-functional collaboration in AI education. Gained hands-on experience in process optimization, stakeholder management, and data-driven decision making while contributing to user experience improvements.",
       logo: "/logos/scaler.png",
-      current: true
+      current: false
     },
     {
       title: "Full Stack Developer",

@@ -96,8 +96,8 @@ const Hero = () => {
               Aspiring Product Manager & Operations Professional
             </h2>
             <p className="text-lg mb-8 max-w-lg">
-              Currently learning operational excellence at Scaler AI Labs. I'm transitioning from development to product thinking, 
-              focusing on user-centric solutions and cross-functional collaboration while building my expertise.
+              Currently working as Operations Intern in the Product Team at Signzy. I'm applying product thinking to operational challenges, 
+              focusing on user-centric solutions and cross-functional collaboration in the fintech space.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="experience" smooth={true} duration={500} offset={-70}>
