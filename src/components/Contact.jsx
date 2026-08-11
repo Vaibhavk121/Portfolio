@@ -16,12 +16,33 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
+      // Get form data
+      const formData = new FormData(form.current);
+      const userName = formData.get('user_name');
+      const userEmail = formData.get('user_email');
+      const originalMessage = formData.get('message');
+
+      // Create enhanced message with name and email
+      const enhancedMessage = `From: ${userName}
+Email: ${userEmail}
+
+Message:
+${originalMessage}`;
+
+      // Update the message field with enhanced content
+      const messageField = form.current.querySelector('textarea[name="message"]');
+      const originalValue = messageField.value;
+      messageField.value = enhancedMessage;
+
       const result = await emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
+
+      // Restore original message value for user experience
+      messageField.value = originalValue;
 
       if (result.status === 200) {
         setStatus({
